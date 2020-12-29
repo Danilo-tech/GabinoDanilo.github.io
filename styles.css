@@ -4,17 +4,17 @@ padding-left: 30%;
 
 .paralax_section{
     width: 100%;
-    height: 300px;
-    margin: 50px 0;
+    height: 450px;
     position: relative;
     background-image: url(./img/starsBG2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding-top: 140px;
+    padding-top: 180px;
 }
 .paralax_section h2{
     color: black;
+    font-size: 50px;
     font-weight: 500;
     text-align: center;
     transition: .3s;
@@ -29,7 +29,6 @@ padding-left: 30%;
     width: 100%;
     height: 200px;
     padding: 50px;
-    margin-top: 50px;
 }
 .links_section .section_div{
     width: 50%;
@@ -41,7 +40,6 @@ padding-left: 30%;
     width: 70px;
     height: 70px;
     border-radius: 5px;
-    background-color: #fff;
     border:solid 3px #6c757d;
     transition: .3s;
     box-sizing: border-box;

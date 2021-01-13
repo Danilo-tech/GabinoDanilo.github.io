@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Barra de navegación desplegable</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1,maximum-scale=1">
+        <!--Para conectar html y css-->
+        <link rel="stylesheet" href=style.css>
+        <!--otras maneras-->
+        <!--con import, pero si no carga uno se bloquean los demas-->
+        <!--
+        <style>
+            @import url('style.css');
+            @import url('style2.css');
+        </style>
+        -->
+        <!--Tambien se puede usar en el mismo html con la etiqueta </style>
+            o tambien con el atributo style en la misma etiqueta html-->
+    </head>
+    <body> 
+        <header>
+            <input type="checkbox" id="btn-menu">
+            <label for="btn-menu"><img src="icons/icon_menuDesplegable.png" alt=""
+                width="30px"></label>
+            <nav  class="menu">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#" id = "user">Item 2</a>
+                        <ul>
+                            <li><a href="#">Subitem 1</a></li>
+                            <li><a href="#">Subitem 2</a></li>
+                            <li><a href="#">Más Opciones</a>
+                                <ul>
+                                    <li><a href="#">Sub subitem 1</a></li>
+                                    <li><a href="#">Sub subitem 2</a></li>
+                                    <li><a href="#">Sub subitem 3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Subitem 4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Item 3</a></li>
+                    <li><a href="#">Item 4</a></li>
+                    <li><a href="#">Item 5</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1 id="usr"></h1>
+        <h1>Bienvenido!</h1>
+        <h1>Determino si el año es bisiesto</h1>
+        <p>cada 4 años un año tiene 366 dias</p>
+        <script type="text/javascript">
+            var etiqueta = document.getElementById("user");
+            var etiqueta2 = document.getElementById("usr");
+            var usuario = prompt("Ingrese usuario");
+            etiqueta.innerHTML=usuario;
+            etiqueta2.innerHTML=usuario;
+            var año = parseInt(prompt("Ingrese el año"));
+            var tipo
+            if (año % 4 == 0)
+            {
+                if (año % 100 == 0)
+                {
+                    if (año % 400 == 0)
+                    {
+                       tipo = "bisiesto"
+                    }
+                    else
+                    {
+                        tipo = "No bisiesto"
+                    }
+                }
+                else
+                {
+                    tipo = "bisiesto"
+                }
+            }
+            else
+            {
+                tipo = "No bisiesto"
+            }
+            document.write("El <strong>año "+año+"</strong> es <strong>"+tipo+"</strong>");
+            document.write("<br>Para determinar que es biciesto, el año debe ser: ");
+            document.write("<br>múltiplo de 4,<br>");
+            document.write("y si aparte es múltiplo de 100, entonces también debe ser multiplo de 400,");
+            document.write("<br>en caso contrario no es bisiesto");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lucida Sans Unicode';
+}
+/*ESTILOS GENERALES*/
+#btn-menu{
+    display: none;
+}
+header label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    border: 1px solid #000;
+}
+label:hover{
+    cursor:pointer;
+    background: rgba(0,0,0,.5);
+}
+nav ul{
+    list-style: none;
+    padding:0;
+}
+nav  li{
+    line-height: 3rem;
+    position: relative;
+}
+.menu ul ul{
+    position: absolute;
+    display:flex;
+}
+nav a{
+    color: #ddd;
+    display: block;
+    padding: 0 2.5em;
+    text-decoration: none;
+    transition: .4s;
+}
+nav a:hover{
+    background: rgba(0,0,0,.5);
+    cursor:pointer;
+}
+/*PRIMER NIVEL*/
+.menu ul{
+    background: rgb(104, 102, 202);
+    display: table;
+    width: 100%;
+}
+.menu ul > li{
+    float: left;
+}
+/*SEGUNDO NIVEL*/
+nav li li{
+    background:rgb(71, 69, 165);
+    max-height: 0;
+    transition: all .5s;
+    overflow: hidden;
+    width: 200px;
+}
+nav li:hover > ul > li{
+    max-height: 1000px;
+    overflow: visible;
+}
+.menu ul > li > ul{
+    top: 100%;
+    flex-direction: column;
+}
+/*TERCER NIVEL*/
+.menu ul ul ul{
+    left: 100%;
+    top: 0;
+    flex-direction: column;
+}
+/*BOTON*/
+@media(max-width:680px){
+    header label{
+        display: block;
+    }
+    .menu ul{
+        position: absolute;
+        width: 8.2em;
+        margin-left: -70%;
+    }
+    .menu ul > li > ul{
+        top: 0;
+        left: 100%;
+        flex-direction: column;
+    }
+    #btn-menu:checked ~ .menu ul{
+        margin: 0;
+    }
+}

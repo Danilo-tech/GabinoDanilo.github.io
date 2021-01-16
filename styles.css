@@ -1,5 +1,5 @@
 .navbar{
-padding-left: 30%;
+padding-left: 20%;
 }
 
 .paralax_section{
@@ -59,3 +59,35 @@ padding-left: 30%;
 .links_section .section_div .section_div--link:hover{
     transform: scale(1.2);
 }
+/*styles form*/
+.pform{
+    margin-bottom: 2px;
+}
+.entradas{
+    height: 35px;
+    background: rgb(104, 102, 202);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 1px;
+    border: 1px solid #46c834;
+    font-family: 'calibri';
+    font-size: 16px;
+    color: white;
+}
+#btn_iniciarSesion{
+    height: 35px;
+    padding: 5px;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+#link_crearCuenta{
+    display: flex;
+    margin-left: 10px;
+    margin-top: -10px;
+    margin-bottom: -15px;
+}
+#link_crearCuenta:hover{
+    text-decoration: underline;
+}
+
+
